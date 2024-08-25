@@ -1,4 +1,4 @@
-import {image1} from '../assets/about01'
+
 
 const About = () => {
   return (
@@ -32,7 +32,7 @@ const About = () => {
           className="flex items-center justify-center flex-col p-4"
         >
           <img
-            src={image1}
+            src={'../assets/about01.png'}
             alt="Web Development"
             className="w-full object-cover"
           />
