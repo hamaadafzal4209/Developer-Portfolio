@@ -32,11 +32,11 @@ const About = () => {
           className="flex items-center justify-center flex-col p-4"
         >
           <img
-            src={'../assets/about01.png'}
+            src={'../../public/assets/about01.png'}
             alt="Web Development"
-            className="w-full object-cover"
+            className="w-full object-cover rounded-lg"
           />
-          <div className="p-6">
+          <div className="text-center mt-4">
             <p className="text-lg font-semibold mb-2">Web Development</p>
             <p className="text-gray-300 text-sm">
               Creating responsive and interactive websites using modern
@@ -44,52 +44,78 @@ const About = () => {
             </p>
           </div>
         </div>
-
-        {/* Card 2 */}
-        <div className="w-full bg-gray-800 border border-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+        <div
+          style={{
+            boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
+            borderRadius: "15px",
+            background: "rgba(255,255,255,0.1)",
+            overflow: "hidden",
+            borderTop: "1px solid rgba(255,255,255,0.5)",
+            borderLeft: "1px solid rgba(255,255,255,0.5)",
+            backdropFilter: "blur(20px)"
+          }}
+          className="flex items-center justify-center flex-col p-4"
+        >
           <img
-            src="/assets/about01.png"
-            alt="UI/UX Design"
-            className="w-full object-cover"
+           src={'../../public/assets/about02.png'}
+            alt="Web Development"
+            className="w-full object-cover rounded-lg"
           />
-          <div className="p-6">
-            <p className="text-lg font-semibold mb-2">UI/UX Design</p>
+          <div className="text-center mt-4">
+            <p className="text-lg font-semibold mb-2">Web Development</p>
             <p className="text-gray-300 text-sm">
-              Designing user-friendly interfaces with a focus on user
-              experience.
+              Creating responsive and interactive websites using modern
+              technologies.
             </p>
           </div>
         </div>
-
-        {/* Card 3 */}
-        <div className="w-full bg-gray-800 border border-gray-700 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+        <div
+          style={{
+            boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
+            borderRadius: "15px",
+            background: "rgba(255,255,255,0.1)",
+            overflow: "hidden",
+            borderTop: "1px solid rgba(255,255,255,0.5)",
+            borderLeft: "1px solid rgba(255,255,255,0.5)",
+            backdropFilter: "blur(20px)"
+          }}
+          className="flex items-center justify-center flex-col p-4"
+        >
           <img
-            src="/assets/about01.png"
-            alt="API Integration"
-            className="w-full object-cover"
+           src={'../../public/assets/about03.png'}
+            alt="Web Development"
+            className="w-full object-cover rounded-lg"
           />
-          <div className="p-6">
-            <p className="text-lg font-semibold mb-2">API Integration</p>
+          <div className="text-center mt-4">
+            <p className="text-lg font-semibold mb-2">Web Development</p>
             <p className="text-gray-300 text-sm">
-              Integrating third-party APIs to extend application functionality.
+              Creating responsive and interactive websites using modern
+              technologies.
             </p>
           </div>
         </div>
-
-        {/* Card 4 */}
-        <div className="w-full bg-gray-800 border border-gray-700 backdrop-blur-3xl rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+        <div
+          style={{
+            boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
+            borderRadius: "15px",
+            background: "rgba(255,255,255,0.1)",
+            overflow: "hidden",
+            borderTop: "1px solid rgba(255,255,255,0.5)",
+            borderLeft: "1px solid rgba(255,255,255,0.5)",
+            backdropFilter: "blur(20px)"
+          }}
+          className="flex items-center justify-center flex-col p-4"
+        >
           <img
-            src="/assets/about01.png"
-            alt="Performance Optimization"
-            className="w-full object-cover"
+           src={'../../public/assets/about04.png'}
+            alt="Web Development"
+            className="w-full object-cover rounded-lg"
           />
-          <div className="p-6">
-            <p className="text-lg font-semibold mb-2">
-              Performance Optimization
-            </p>
+          <div className="text-center mt-4">
+            <p className="text-lg font-semibold mb-2">Web Development</p>
             <p className="text-gray-300 text-sm">
-              Enhancing application performance for faster and smoother user
-              experiences.
+              Creating responsive and interactive websites using modern
+              technologies.
             </p>
           </div>
         </div>
