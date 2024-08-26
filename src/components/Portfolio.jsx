@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 function Portfolio() {
@@ -7,22 +8,29 @@ function Portfolio() {
       className="pt-12 pb-8 px-[5%] bg-gray-900 text-white"
     >
       <div className="mb-12">
-        <h2 className="text-base uppercase font-normal text-gray-400 mb-4">
+       <Fade>
+       <h2 className="text-base uppercase font-normal text-gray-400 mb-4">
           My Projects
         </h2>
+       </Fade>
+       <Fade>
         <h2 className="text-2xl md:text-5xl font-bold mb-4">Showcase.</h2>
+       </Fade>
+       <Fade>
         <p className="text-gray-400 text-sm max-w-xl leading-[22px]">
           Explore a selection of my recent projects, showcasing a blend of
           creativity and technical expertise. Each project highlights my
           proficiency in developing high-quality, responsive applications
           tailored to meet specific user needs and solve real-world problems.
         </p>
+       </Fade>
       </div>
 
       {/* Projects */}
       <div className="projects-card-container gap-6">
         {/* Card 1 */}
-        <div
+     <Fade>
+     <div
           style={{
             boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
             borderRadius: "12px",
@@ -67,7 +75,9 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div
+     </Fade>
+     <Fade>
+     <div
           style={{
             boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
             borderRadius: "12px",
@@ -112,7 +122,9 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div
+     </Fade>
+     <Fade>
+     <div
           style={{
             boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
             borderRadius: "12px",
@@ -157,7 +169,9 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div
+     </Fade>
+     <Fade>
+     <div
           style={{
             boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
             borderRadius: "12px",
@@ -202,7 +216,9 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div
+     </Fade>
+     <Fade>
+     <div
           style={{
             boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
             borderRadius: "12px",
@@ -247,7 +263,9 @@ function Portfolio() {
             </div>
           </div>
         </div>
-        <div
+     </Fade>
+     <Fade>
+     <div
           style={{
             boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
             borderRadius: "12px",
@@ -292,6 +310,7 @@ function Portfolio() {
             </div>
           </div>
         </div>
+     </Fade>
 
       </div>
     </section>

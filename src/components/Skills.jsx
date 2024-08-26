@@ -1,3 +1,5 @@
+import {Fade} from 'react-awesome-reveal';
+
 const skills = [
   { name: "HTML5", src: "/assets/html.png", bgColor: "#FCE4E4" },
   { name: "CSS3", src: "/assets/css.png", bgColor: "#E0F0FF" },
@@ -46,7 +48,8 @@ const Skills = () => {
       id="skills"
       className="pb-10 px-[5%] bg-gray-900 text-white max-w-5xl w-full mx-auto"
     >
-      <div className="flex items-center justify-center flex-wrap gap-6">
+     <Fade>
+     <div className="flex items-center justify-center flex-wrap gap-6">
         {skills.map((skill, index) => (
           <div key={index} className="flex flex-col items-center">
             <div
@@ -63,6 +66,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
+     </Fade>
     </section>
   );
 };
