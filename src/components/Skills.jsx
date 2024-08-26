@@ -7,7 +7,12 @@ const skills = [
       bgColor: "#F9F9D4",
     },
     { name: "React", src: "../../public/assets/react.png", bgColor: "#D8F4FF" },
-    { name: 'Next.js', src: '../../public/assets/next-js.png', bgColor: '#F4F4F4' },
+    { name: "Git", src: "../../public/assets/git.png", bgColor: "#F8F8F8" },  
+    {
+      name: "Next.js",
+      src: "../../public/assets/next-js.png",
+      bgColor: "#F4F4F4",
+    },
     { name: "Redux", src: "../../public/assets/redux.png", bgColor: "#F3E7FF" },
     {
       name: "Tailwind CSS",
@@ -22,6 +27,7 @@ const skills = [
     { name: "SCSS", src: "../../public/assets/sass.png", bgColor: "#E8D6F1" },
     { name: "MUI", src: "../../public/assets/mu5.png", bgColor: "#B9D9FF" },
     { name: "Node.js", src: "../../public/assets/node.png", bgColor: "#D4E6D7" },
+    { name: "Firebase", src: "../../public/assets/firebase.png", bgColor: "#FFF5E1" },
     {
       name: "MongoDB",
       src: "../../public/assets/mongodb.png",
@@ -30,7 +36,7 @@ const skills = [
     {
       name: "TypeScript",
       src: "../../public/assets/typescript.png",
-      bgColor: "#98bbe2", 
+      bgColor: "#98bbe2",
     },
   ];
   
@@ -38,7 +44,7 @@ const skills = [
     return (
       <section
         id="skills"
-        className="pb-20 sm:pb-20 px-[5%] bg-gray-900 text-white max-w-4xl w-full mx-auto"
+        className="pb-20 sm:pb-20 px-[5%] bg-gray-900 text-white max-w-5xl w-full mx-auto"
       >
         <div className="flex items-center justify-center flex-wrap gap-6">
           {skills.map((skill, index) => (
