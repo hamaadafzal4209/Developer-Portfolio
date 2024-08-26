@@ -14,7 +14,10 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-12 sm:py-20 px-[5%] bg-gray-900 text-white">
+    <section
+      id="about"
+      className="py-12 sm:py-20 px-[5%] bg-gray-900 text-white"
+    >
       <div className="mb-12">
         <h2 className="text-base uppercase font-normal text-gray-400 mb-4">
           Introduction
@@ -36,17 +39,15 @@ const About = () => {
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
               borderRadius: "15px",
-              background: "rgba(255,255,255,0.1)",
               overflow: "hidden",
+              background: "#1b2a38", // Darker shade to contrast with body background
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
-              backdropFilter: "blur(20px)",
-              height: "auto", // Ensures consistent height
             }}
             className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
-              src={"../../public/assets/mobile.png"} 
+              src={"../../public/assets/mobile.png"}
               alt="Mobile App Development"
               className="w-full object-cover rounded-lg mb-4"
               style={{ height: "200px" }} // Set consistent image height
@@ -56,7 +57,8 @@ const About = () => {
                 Mobile App Development
               </p>
               <p className="text-gray-300 text-sm">
-                Building high-performance mobile applications for both iOS and Android platforms.
+                Building high-performance mobile applications for both iOS and
+                Android platforms.
               </p>
             </div>
           </div>
@@ -68,12 +70,10 @@ const About = () => {
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
               borderRadius: "15px",
-              background: "rgba(255,255,255,0.1)",
+              background: "#1b2a38", // Darker shade to contrast with body background
               overflow: "hidden",
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
-              backdropFilter: "blur(20px)",
-              height: "auto", // Ensures consistent height
             }}
             className="flex flex-col items-center p-4 cursor-pointer"
           >
@@ -99,17 +99,15 @@ const About = () => {
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
               borderRadius: "15px",
-              background: "rgba(255,255,255,0.1)",
+              background: "#1b2a38", // Darker shade to contrast with body background
               overflow: "hidden",
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
-              backdropFilter: "blur(20px)",
-              height: "auto", // Ensures consistent height
             }}
             className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
-              src={"../../public/assets/about03.png"}
+              src={"../../public/assets/frontend.jpg"}
               alt="Frontend Development"
               className="w-full object-cover rounded-lg mb-4"
               style={{ height: "200px" }} // Set consistent image height
@@ -130,17 +128,15 @@ const About = () => {
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
               borderRadius: "15px",
-              background: "rgba(255,255,255,0.1)",
+              background: "#1b2a38", // Darker shade to contrast with body background
               overflow: "hidden",
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
-              backdropFilter: "blur(20px)",
-              height: "auto", // Ensures consistent height
             }}
             className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
-              src={"../../public/assets/about04.png"}
+              src={"../../public/assets/api-integration.jpg"}
               alt="API Integration"
               className="w-full object-cover rounded-lg mb-4"
               style={{ height: "200px" }} // Set consistent image height
