@@ -34,7 +34,7 @@ function Portfolio() {
           className="relative flex flex-col items-center p-4"
         >
           <img
-            src="../../public/assets/bgIMG.png"
+            src="https://images.pexels.com/photos/12025430/pexels-photo-12025430.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="Project Screenshot"
             className="w-full h-48 object-cover rounded-lg"
           />
@@ -79,7 +79,7 @@ function Portfolio() {
           className="relative flex flex-col items-center p-4"
         >
           <img
-            src="../../public/assets/bgIMG.png"
+            src="https://images.pexels.com/photos/12025430/pexels-photo-12025430.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="Project Screenshot"
             className="w-full h-48 object-cover rounded-lg"
           />
@@ -124,7 +124,7 @@ function Portfolio() {
           className="relative flex flex-col items-center p-4"
         >
           <img
-            src="../../public/assets/bgIMG.png"
+            src="https://images.pexels.com/photos/12025430/pexels-photo-12025430.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="Project Screenshot"
             className="w-full h-48 object-cover rounded-lg"
           />
@@ -169,7 +169,7 @@ function Portfolio() {
           className="relative flex flex-col items-center p-4"
         >
           <img
-            src="../../public/assets/bgIMG.png"
+            src="https://images.pexels.com/photos/12025430/pexels-photo-12025430.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="Project Screenshot"
             className="w-full h-48 object-cover rounded-lg"
           />
@@ -214,7 +214,7 @@ function Portfolio() {
           className="relative flex flex-col items-center p-4"
         >
           <img
-            src="../../public/assets/bgIMG.png"
+            src="https://images.pexels.com/photos/12025430/pexels-photo-12025430.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="Project Screenshot"
             className="w-full h-48 object-cover rounded-lg"
           />
@@ -259,7 +259,7 @@ function Portfolio() {
           className="relative flex flex-col items-center p-4"
         >
           <img
-            src="../../public/assets/bgIMG.png"
+            src="https://images.pexels.com/photos/12025430/pexels-photo-12025430.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="Project Screenshot"
             className="w-full h-48 object-cover rounded-lg"
           />
