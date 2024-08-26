@@ -1,6 +1,10 @@
+import { useRef } from "react";
 import { Tilt } from "react-tilt";
 
 const About = () => {
+
+  const aboutRef = useRef(null);
+  
   const tiltOptions = {
     reverse: false, // reverse the tilt direction
     max: 35, // max tilt rotation (degrees)
@@ -15,6 +19,7 @@ const About = () => {
 
   return (
     <section
+    ref={aboutRef}
       id="about"
       className="py-12 sm:py-20 px-[5%] bg-gray-900 text-white"
     >
@@ -40,17 +45,17 @@ const About = () => {
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
               borderRadius: "15px",
               overflow: "hidden",
-              background: "#1b2a38", // Darker shade to contrast with body background
+              background: "#1b2a38",
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
             }}
             className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
-              src={"../../public/assets/mobile.png"}
+              src={"/assets/mobile.png"}
               alt="Mobile App Development"
               className="w-full object-cover rounded-lg mb-4"
-              style={{ height: "200px" }} // Set consistent image height
+              style={{ height: "200px" }}
             />
             <div className="text-center">
               <p className="text-lg font-semibold mb-2">
@@ -70,7 +75,7 @@ const About = () => {
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
               borderRadius: "15px",
-              background: "#1b2a38", // Darker shade to contrast with body background
+              background: "#1b2a38",
               overflow: "hidden",
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
@@ -78,10 +83,10 @@ const About = () => {
             className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
-              src={"../../public/assets/backend.jpeg"}
+              src={"/assets/backend.jpeg"}
               alt="Backend Development"
               className="w-full object-cover rounded-lg mb-4"
-              style={{ height: "200px" }} // Set consistent image height
+              style={{ height: "200px" }}
             />
             <div className="text-center">
               <p className="text-lg font-semibold mb-2">Backend Development</p>
@@ -99,7 +104,7 @@ const About = () => {
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
               borderRadius: "15px",
-              background: "#1b2a38", // Darker shade to contrast with body background
+              background: "#1b2a38",
               overflow: "hidden",
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
@@ -107,10 +112,10 @@ const About = () => {
             className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
-              src={"../../public/assets/frontend.jpg"}
+              src={"/assets/frontend.jpg"}
               alt="Frontend Development"
               className="w-full object-cover rounded-lg mb-4"
-              style={{ height: "200px" }} // Set consistent image height
+              style={{ height: "200px" }}
             />
             <div className="text-center">
               <p className="text-lg font-semibold mb-2">Frontend Development</p>
@@ -128,7 +133,7 @@ const About = () => {
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
               borderRadius: "15px",
-              background: "#1b2a38", // Darker shade to contrast with body background
+              background: "#1b2a38",
               overflow: "hidden",
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
@@ -136,10 +141,10 @@ const About = () => {
             className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
-              src={"../../public/assets/api-integration.jpg"}
+              src={"/assets/api-integration.jpg"}
               alt="API Integration"
               className="w-full object-cover rounded-lg mb-4"
-              style={{ height: "200px" }} // Set consistent image height
+              style={{ height: "200px" }}
             />
             <div className="text-center">
               <p className="text-lg font-semibold mb-2">API Integration</p>
