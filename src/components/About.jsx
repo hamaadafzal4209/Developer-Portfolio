@@ -1,7 +1,7 @@
 import { Tilt } from "react-tilt";
 
 const About = () => {
-  const titltOptions = {
+  const tiltOptions = {
     reverse: false, // reverse the tilt direction
     max: 35, // max tilt rotation (degrees)
     perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
@@ -14,7 +14,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-12 sm:pb-20 px-[5%] bg-gray-900 text-white">
+    <section id="about" className="py-12 sm:py-20 px-[5%] bg-gray-900 text-white">
       <div className="mb-12">
         <h2 className="text-base uppercase font-normal text-gray-400 mb-4">
           Introduction
@@ -30,8 +30,8 @@ const About = () => {
 
       {/* Services cards */}
       <div className="card-container gap-6">
-        {/* Card 1 */}
-        <Tilt options={titltOptions}>
+        {/* Mobile App Development Card */}
+        <Tilt options={tiltOptions}>
           <div
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
@@ -41,27 +41,29 @@ const About = () => {
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
               backdropFilter: "blur(20px)",
+              height: "auto", // Ensures consistent height
             }}
-            className="flex items-center justify-center flex-col p-4 cursor-pointer"
+            className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
-              src={"../../public/assets/about01.png"}
-              alt="Full Stack Development"
-              className="w-full object-cover rounded-lg"
+              src={"../../public/assets/mobile.png"} 
+              alt="Mobile App Development"
+              className="w-full object-cover rounded-lg mb-4"
+              style={{ height: "200px" }} // Set consistent image height
             />
-            <div className="text-center mt-4">
+            <div className="text-center">
               <p className="text-lg font-semibold mb-2">
-                Full Stack Development
+                Mobile App Development
               </p>
               <p className="text-gray-300 text-sm">
-                Expert in building both frontend and backend of web applications
-                with modern technologies.
+                Building high-performance mobile applications for both iOS and Android platforms.
               </p>
             </div>
           </div>
         </Tilt>
 
-        <Tilt options={titltOptions}>
+        {/* Backend Development Card */}
+        <Tilt options={tiltOptions}>
           <div
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
@@ -71,15 +73,17 @@ const About = () => {
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
               backdropFilter: "blur(20px)",
+              height: "auto", // Ensures consistent height
             }}
-            className="flex items-center justify-center flex-col p-4 cursor-pointer"
+            className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
-              src={"../../public/assets/about02.png"}
+              src={"../../public/assets/backend.jpeg"}
               alt="Backend Development"
-              className="w-full object-cover rounded-lg"
+              className="w-full object-cover rounded-lg mb-4"
+              style={{ height: "200px" }} // Set consistent image height
             />
-            <div className="text-center mt-4">
+            <div className="text-center">
               <p className="text-lg font-semibold mb-2">Backend Development</p>
               <p className="text-gray-300 text-sm">
                 Creating robust and scalable backend systems with Node.js,
@@ -89,7 +93,8 @@ const About = () => {
           </div>
         </Tilt>
 
-        <Tilt options={titltOptions}>
+        {/* Frontend Development Card */}
+        <Tilt options={tiltOptions}>
           <div
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
@@ -99,15 +104,17 @@ const About = () => {
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
               backdropFilter: "blur(20px)",
+              height: "auto", // Ensures consistent height
             }}
-            className="flex items-center justify-center flex-col p-4 cursor-pointer"
+            className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
               src={"../../public/assets/about03.png"}
               alt="Frontend Development"
-              className="w-full object-cover rounded-lg"
+              className="w-full object-cover rounded-lg mb-4"
+              style={{ height: "200px" }} // Set consistent image height
             />
-            <div className="text-center mt-4">
+            <div className="text-center">
               <p className="text-lg font-semibold mb-2">Frontend Development</p>
               <p className="text-gray-300 text-sm">
                 Designing and developing responsive UIs with React, TypeScript,
@@ -117,7 +124,8 @@ const About = () => {
           </div>
         </Tilt>
 
-        <Tilt options={titltOptions}>
+        {/* API Integration Card */}
+        <Tilt options={tiltOptions}>
           <div
             style={{
               boxShadow: "20px 20px 50px rgba(0,0,0,0.5)",
@@ -127,15 +135,17 @@ const About = () => {
               borderTop: "1px solid rgba(255,255,255,0.5)",
               borderLeft: "1px solid rgba(255,255,255,0.5)",
               backdropFilter: "blur(20px)",
+              height: "auto", // Ensures consistent height
             }}
-            className="flex items-center justify-center flex-col p-4 cursor-pointer"
+            className="flex flex-col items-center p-4 cursor-pointer"
           >
             <img
               src={"../../public/assets/about04.png"}
               alt="API Integration"
-              className="w-full object-cover rounded-lg"
+              className="w-full object-cover rounded-lg mb-4"
+              style={{ height: "200px" }} // Set consistent image height
             />
-            <div className="text-center mt-4">
+            <div className="text-center">
               <p className="text-lg font-semibold mb-2">API Integration</p>
               <p className="text-gray-300 text-sm">
                 Integrating third-party APIs and building RESTful services for

@@ -44,7 +44,7 @@ const skills = [
     return (
       <section
         id="skills"
-        className="pb-20 sm:pb-20 px-[5%] bg-gray-900 text-white max-w-5xl w-full mx-auto"
+        className="pb-10  px-[5%] bg-gray-900 text-white max-w-5xl w-full mx-auto"
       >
         <div className="flex items-center justify-center flex-wrap gap-6">
           {skills.map((skill, index) => (

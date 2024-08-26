@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const variants = {
   open: { opacity: 1, x: 0 },
@@ -20,20 +20,20 @@ function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <div
       className={`bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-white transition-shadow duration-300 ${
-        isSticky ? 'fixed top-0 left-0 right-0 shadow-lg z-50' : ''
+        isSticky ? "fixed top-0 left-0 right-0 shadow-lg z-50" : ""
       }`}
     >
-      <div className="flex items-center justify-between py-4 px-[5%]">
+      <div className="flex items-center justify-between py-4 px-[5%] ">
         {/* Logo */}
         <div className="text-[22px] md:text-2xl font-bold">Portfolio</div>
 
@@ -41,10 +41,14 @@ function Navbar() {
         <div className="hidden md:flex items-center">
           <ul className="flex items-center gap-6">
             <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
-                <a href="#about">About</a>
+              <a href="#about">About</a>
             </li>
-            <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">Projects</li>
-            <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">Contact</li>
+            <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+              <a href="#portfolio">Projects</a>
+            </li>
+            <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
 
@@ -64,17 +68,22 @@ function Navbar() {
         className="fixed top-0 right-0 w-64 bg-gray-800 text-white h-full md:hidden z-40"
       >
         {/* Close button */}
-        <button 
-          onClick={() => setIsOpen(false)} 
+        <button
+          onClick={() => setIsOpen(false)}
           className="absolute top-4 right-4 text-2xl"
         >
           <FaTimes />
         </button>
         <ul className="flex flex-col items-start pt-20 space-y-4 pl-4">
-          <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">Home</li>
-          <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">About</li>
-          <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">Projects</li>
-          <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">Contact</li>
+          <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+            <a href="#about">About</a>
+          </li>
+          <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+            <a href="#portfolio">Projects</a>
+          </li>
+          <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </motion.div>
     </div>
