@@ -40,7 +40,9 @@ function Navbar() {
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center">
           <ul className="flex items-center gap-6">
-            <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">About</li>
+            <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+                <a href="#about">About</a>
+            </li>
             <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">Projects</li>
             <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">Contact</li>
           </ul>
