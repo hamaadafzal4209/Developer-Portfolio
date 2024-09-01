@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -10,11 +10,6 @@ const variants = {
 function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  // Refs for sections
-  const aboutRef = useRef(null);
-  const portfolioRef = useRef(null);
-  const contactRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,10 +27,6 @@ function Navbar() {
     };
   }, []);
 
-  const scrollToSection = (ref) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div
       className={`bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-white transition-shadow duration-300 ${
@@ -51,21 +42,18 @@ function Navbar() {
           <ul className="flex items-center gap-6">
             <li
               className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-              onClick={() => scrollToSection(aboutRef)}
             >
-              About
+              <a href="#about">About</a>
             </li>
             <li
               className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-              onClick={() => scrollToSection(portfolioRef)}
             >
-              Projects
+               <a href="#portfolio">Projects</a>
             </li>
             <li
               className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-              onClick={() => scrollToSection(contactRef)}
             >
-              Contact
+               <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -95,21 +83,18 @@ function Navbar() {
         <ul className="flex flex-col items-start pt-20 space-y-4 pl-4">
           <li
             className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-            onClick={() => scrollToSection(aboutRef)}
           >
-            About
+             <a href="#about">About</a>
           </li>
           <li
             className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-            onClick={() => scrollToSection(portfolioRef)}
           >
-            Projects
+             <a href="#portfolio">Projects</a>
           </li>
           <li
             className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-            onClick={() => scrollToSection(contactRef)}
           >
-            Contact
+             <a href="#contact">Contact</a>
           </li>
         </ul>
       </motion.div>
