@@ -96,10 +96,9 @@ function Contact() {
               required
             ></textarea>
           </Fade>
-          <Fade triggerOnce delay={400}>
             <button
               type="submit"
-              className="mx-auto w-full text-white bg-indigo-800 hover:bg-indigo-900 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800 inline-flex items-center justify-center"
+              className="mx-auto text-white bg-indigo-800 text-base hover:bg-indigo-900 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg px-6 py-3 text-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800 inline-flex items-center justify-center"
               disabled={loading}
             >
               {loading ? (
@@ -127,7 +126,6 @@ function Contact() {
                 "Send Message"
               )}
             </button>
-          </Fade>
         </form>
       </Fade>
     </section>

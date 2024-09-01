@@ -8,13 +8,13 @@ function Footer() {
             <p>&copy; {new Date().getFullYear()} Hamaad Afzal. All rights reserved.</p>
           </div>
           <div className="flex space-x-4">
-            <a href="https://github.com/username" aria-label="GitHub" className="hover:text-white">
+            <a href="https://github.com/hamaadafzal4209/" target="_blank" aria-label="GitHub" className="hover:text-white">
               <FaGithub size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/username/" aria-label="LinkedIn" className="hover:text-white">
+            <a href="https://www.linkedin.com/in/hamaad-afzal-6264022b5/" target="_blank" aria-label="LinkedIn" className="hover:text-white">
               <FaLinkedin size={20} />
             </a>
-            <a href="mailto:youremail@example.com" aria-label="Email" className="hover:text-white">
+            <a href="mailto:hamaadafzal516@gmail.com" aria-label="Email" className="hover:text-white">
               <FaEnvelope size={20} />
             </a>
           </div>

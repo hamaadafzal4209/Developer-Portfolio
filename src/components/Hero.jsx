@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
@@ -91,7 +91,7 @@ function Hero() {
           {/* Social Icons */}
           <div className="flex justify-center gap-6">
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/hamaadafzal4209/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl transition-transform duration-300 hover:text-indigo-300 hover:scale-125"
@@ -99,7 +99,7 @@ function Hero() {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/your-username"
+              href="https://www.linkedin.com/in/hamaad-afzal-6264022b5/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl transition-transform duration-300 hover:text-indigo-300 hover:scale-125"
@@ -107,12 +107,12 @@ function Hero() {
               <FaLinkedin />
             </a>
             <a
-              href="https://twitter.com/your-username"
+              href="mailto:hamaadafzal516@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl transition-transform duration-300 hover:text-indigo-300 hover:scale-125"
             >
-              <FaTwitter />
+              <FaEnvelope />
             </a>
           </div>
         </div>
