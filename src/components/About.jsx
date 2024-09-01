@@ -1,9 +1,7 @@
-import { useRef } from "react";
 import { Tilt } from "react-tilt";
 import { Fade } from "react-awesome-reveal";
 
 const About = () => {
-  const aboutRef = useRef(null);
 
   const tiltOptions = {
     reverse: false,
@@ -19,7 +17,6 @@ const About = () => {
 
   return (
     <section
-      ref={aboutRef}
       id="about"
       className="py-12 sm:py-20 px-[5%] bg-gray-900 text-white"
     >
