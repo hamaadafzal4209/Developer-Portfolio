@@ -1,5 +1,45 @@
+import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+
+const projects = [
+  {
+    title: "MERN Blog App With Admin Panel",
+    description:
+      "A full-featured blog application with an admin panel. This project demonstrates a comprehensive use of the MERN stack, featuring user authentication, CRUD operations, and a responsive design. Tailwind CSS was used to create a visually appealing and responsive interface.",
+    imgSrc: "../../public/assets/blog-project.png",
+    githubLink: "https://github.com/hamaadafzal4209/Blog-App-With-Admin-Panel",
+    liveLink: "https://blog-app-with-admin-panel.onrender.com/",
+    techStack: ["React", "MongoDB", "Express", "Tailwind CSS"],
+  },
+  {
+    title: "Full Stack Food Ordering App",
+    description:
+      "A complete food ordering application featuring a modern UI/UX design. The project includes a secure payment gateway integrated with Stripe and utilizes MongoDB for data storage. This app showcases a seamless user experience and robust backend capabilities.",
+    imgSrc: "../../public/assets/food-app.jpg",
+    githubLink: "https://github.com/hamaadafzal4209/Food-Ordering-App",
+    liveLink: "https://savory-bites.onrender.com/",
+    techStack: ["React", "MongoDB", "Node Js", "Stripe"],
+  },
+  {
+    title: "Real Estate App",
+    description:
+      "A real estate website built with the MERN stack. It allows users to browse and list properties, featuring user authentication, property filtering, and an intuitive design. Tailwind CSS was used to create a clean, responsive, and user-friendly interface.",
+    imgSrc: "../../public/assets/estate-app.png",
+    githubLink: "https://github.com/hamaadafzal4209/mern-real-estate-website",
+    liveLink: "https://mern-estate-vqt3.onrender.com/",
+    techStack: ["React", "Node Js", "MongoDB", "Tailwind CSS"],
+  },
+  {
+    title: "React Portfolio",
+    description:
+      "A modern and responsive portfolio website built with React and Tailwind CSS. This project showcases various projects and skills, with a clean and minimal design, focusing on performance and aesthetics.",
+    imgSrc: "../../public/assets/portfolio.png",
+    githubLink: "https://github.com/hamaadafzal4209/React-Smith-Portfolio-",
+    liveLink: "https://main--smithdesigns.netlify.app/",
+    techStack: ["React", "Tailwind CSS"],
+  },
+];
 
 function Portfolio() {
   return (
@@ -28,317 +68,79 @@ function Portfolio() {
 
       {/* Projects */}
       <div className="projects-card-container gap-6">
-        {/* Card 1 */}
-        <Fade>
-          <div
-            style={{
-              boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-              borderRadius: "12px",
-              background: "#1b2a38",
-              overflow: "hidden",
-              backdropFilter: "blur(15px)",
-              position: "relative",
-            }}
-            className="relative flex flex-col items-center p-4"
-          >
-            <img
-              src="../../public/assets/blog-project.png"
-              alt="Project Screenshot"
-              className="rounded-lg aspect-video"
-            />
-            <div className="absolute top-6 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <a
-                href="https://github.com/hamaadafzal4209/Blog-App-With-Admin-Panel"
-                target="_blank"
-              >
-                <FaGithub className="text-white text-lg" />
-              </a>
-            </div>
-            <div className="absolute top-16 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <a
-                href="https://blog-app-with-admin-panel.onrender.com/"
-                target="_blank"
-              >
-                <FaExternalLinkAlt className="text-white text-lg" />
-              </a>
-            </div>
-            <div className="mt-4 text-left">
-              <h3 className="text-lg font-semibold mb-2">Mern Blog App With Admin Panel</h3>
-              <p className="text-gray-300 text-sm mb-2">
-                Brief description of the project, outlining its features and
-                technologies used. A concise summary that captures the essence
-                of the work.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  React
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  MongoDB
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  Express
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  Tailwind CSS
-                </span>
-              </div>
-            </div>
-          </div>
-        </Fade>
-        {/* card 2 */}
-        <Fade>
-          <div
-            style={{
-              boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-              borderRadius: "12px",
-              background: "#1b2a38",
-              overflow: "hidden",
-              backdropFilter: "blur(15px)",
-              position: "relative",
-            }}
-            className="relative flex flex-col items-center p-4"
-          >
-            <img
-              src="../../public/assets/food-app.jpg"
-              alt="Project Screenshot"
-              className="aspect-video rounded-lg"
-            />
-            <div className="absolute top-6 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <a
-                href="https://github.com/hamaadafzal4209/Food-Ordering-App"
-                target="_blank"
-              >
-                <FaGithub className="text-white text-lg" />
-              </a>
-            </div>
-            <div className="absolute top-16 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <a href="https://savory-bites.onrender.com/" target="_blank">
-                <FaExternalLinkAlt className="text-white text-lg" />
-              </a>
-            </div>
-            <div className="mt-4 text-left">
-              <h3 className="text-lg font-semibold mb-2">Full STack Food Ordering App</h3>
-              <p className="text-gray-300 text-sm mb-2">
-                Brief description of the project, outlining its features and
-                technologies used. A concise summary that captures the essence
-                of the work.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  React
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  MongoDB
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  Node Js
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  Stripe
-                </span>
-              </div>
-            </div>
-          </div>
-        </Fade>
-        {/* card 3 */}
-        <Fade>
-          <div
-            style={{
-              boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-              borderRadius: "12px",
-              background: "#1b2a38",
-              overflow: "hidden",
-              backdropFilter: "blur(15px)",
-              position: "relative",
-            }}
-            className="relative flex flex-col items-center p-4"
-          >
-            <img
-              src="../../public/assets/estate-app.png"
-              alt="Project Screenshot"
-              className="aspect-video rounded-lg"
-            />
-            <div className="absolute top-6 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <a
-                href="https://github.com/hamaadafzal4209/mern-real-estate-website"
-                target="_blank"
-              >
-                <FaGithub className="text-white text-lg" />
-              </a>
-            </div>
-            <div className="absolute top-16 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <a href="https://mern-estate-vqt3.onrender.com/" target="_blank">
-                <FaExternalLinkAlt className="text-white text-lg" />
-              </a>
-            </div>
-            <div className="mt-4 text-left">
-              <h3 className="text-lg font-semibold mb-2">Real Estate App</h3>
-              <p className="text-gray-300 text-sm mb-2">
-                Brief description of the project, outlining its features and
-                technologies used. A concise summary that captures the essence
-                of the work.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  React
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  Node Js
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  MongoDB
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  Tailwind CSS
-                </span>
-              </div>
-            </div>
-          </div>
-        </Fade>
-        <Fade>
-          <div
-            style={{
-              boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-              borderRadius: "12px",
-              background: "#1b2a38",
-              overflow: "hidden",
-              backdropFilter: "blur(15px)",
-              position: "relative",
-            }}
-            className="relative flex flex-col items-center p-4"
-          >
-            <img
-              src="https://images.pexels.com/photos/12025430/pexels-photo-12025430.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Project Screenshot"
-              className="w-full h-48 object-cover rounded-lg"
-            />
-            <div className="absolute top-6 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <FaGithub className="text-white text-lg" />
-            </div>
-            <div className="absolute top-16 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <FaExternalLinkAlt className="text-white text-lg" />
-            </div>
-            <div className="mt-4 text-left">
-              <h3 className="text-lg font-semibold mb-2">Project Title</h3>
-              <p className="text-gray-300 text-sm mb-2">
-                Brief description of the project, outlining its features and
-                technologies used. A concise summary that captures the essence
-                of the work.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  HTML
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  CSS
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  JavaScript
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  React
-                </span>
-              </div>
-            </div>
-          </div>
-        </Fade>
-        <Fade>
-          <div
-            style={{
-              boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-              borderRadius: "12px",
-              background: "#1b2a38",
-              overflow: "hidden",
-              backdropFilter: "blur(15px)",
-              position: "relative",
-            }}
-            className="relative flex flex-col items-center p-4"
-          >
-            <img
-              src="https://images.pexels.com/photos/12025430/pexels-photo-12025430.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Project Screenshot"
-              className="w-full h-48 object-cover rounded-lg"
-            />
-            <div className="absolute top-6 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <FaGithub className="text-white text-lg" />
-            </div>
-            <div className="absolute top-16 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <FaExternalLinkAlt className="text-white text-lg" />
-            </div>
-            <div className="mt-4 text-left">
-              <h3 className="text-lg font-semibold mb-2">Project Title</h3>
-              <p className="text-gray-300 text-sm mb-2">
-                Brief description of the project, outlining its features and
-                technologies used. A concise summary that captures the essence
-                of the work.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  HTML
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  CSS
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  JavaScript
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  React
-                </span>
-              </div>
-            </div>
-          </div>
-        </Fade>
-        <Fade>
-          <div
-            style={{
-              boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
-              borderRadius: "12px",
-              background: "#1b2a38",
-              overflow: "hidden",
-              backdropFilter: "blur(15px)",
-              position: "relative",
-            }}
-            className="relative flex flex-col items-center p-4"
-          >
-            <img
-              src="https://images.pexels.com/photos/12025430/pexels-photo-12025430.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Project Screenshot"
-              className="w-full h-48 object-cover rounded-lg"
-            />
-            <div className="absolute top-6 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <FaGithub className="text-white text-lg" />
-            </div>
-            <div className="absolute top-16 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-              <FaExternalLinkAlt className="text-white text-lg" />
-            </div>
-            <div className="mt-4 text-left">
-              <h3 className="text-lg font-semibold mb-2">Project Title</h3>
-              <p className="text-gray-300 text-sm mb-2">
-                Brief description of the project, outlining its features and
-                technologies used. A concise summary that captures the essence
-                of the work.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  HTML
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  CSS
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  JavaScript
-                </span>
-                <span className="bg-black text-white text-xs py-1 px-2 rounded-full">
-                  React
-                </span>
-              </div>
-            </div>
-          </div>
-        </Fade>
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
       </div>
     </section>
+  );
+}
+
+function ProjectCard({ project }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const charLimit = 90;
+
+  const toggleExpansion = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  return (
+    <Fade>
+      <div
+        style={{
+          boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
+          borderRadius: "12px",
+          background: "#1b2a38",
+          overflow: "hidden",
+          backdropFilter: "blur(15px)",
+          position: "relative",
+        }}
+        className="relative flex flex-col items-center p-4"
+      >
+        <img
+          src={project.imgSrc}
+          alt={`${project.title} Screenshot`}
+          className="rounded-lg aspect-video"
+        />
+        <div className="absolute top-6 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
+          <a href={project.githubLink} target="_blank">
+            <FaGithub className="text-white text-lg" />
+          </a>
+        </div>
+        <div className="absolute top-16 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
+          <a href={project.liveLink} target="_blank">
+            <FaExternalLinkAlt className="text-white text-lg" />
+          </a>
+        </div>
+        <div className="mt-4 text-left">
+          <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+          <p className="text-gray-300 text-sm mb-2">
+            {isExpanded
+              ? project.description
+              : project.description.slice(0, charLimit) +
+                (project.description.length > charLimit ? "..." : "")}
+          </p>
+          {project.description.length > charLimit && (
+            <button
+              onClick={toggleExpansion}
+              className="text-blue-400 text-xs underline"
+            >
+              {isExpanded ? "Read Less" : "Read More"}
+            </button>
+          )}
+          <div className="flex flex-wrap gap-2 mt-2">
+            {project.techStack.map((tech, i) => (
+              <span
+                key={i}
+                className="bg-black text-white text-xs py-1 px-2 rounded-full"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Fade>
   );
 }
 
