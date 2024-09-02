@@ -9,7 +9,7 @@ const navbarVariants = {
 
 const menuVariants = {
   open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "100%" },
+  closed: { opacity: 1, x: "100%" },
 };
 
 function Navbar() {
@@ -38,11 +38,9 @@ function Navbar() {
   return (
     <motion.div
       className={`bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-white transition-shadow duration-300 ${
-        isSticky ? "fixed top-0 left-0 right-0 shadow-lg z-50" : "relative"
+        isSticky ? "fixed top-0 left-0 right-0 shadow-md z-50" : "relative"
       }`}
       variants={navbarVariants}
-      initial="visible" // Ensure navbar is visible by default
-      animate={isSticky ? "visible" : "visible"} // Always animate to visible
     >
       <div className="flex items-center justify-between py-4 px-[5%]">
         {/* Logo */}
@@ -76,7 +74,7 @@ function Navbar() {
         animate={isOpen ? "open" : "closed"}
         variants={menuVariants}
         transition={{ duration: 0.3 }}
-        className="fixed top-0 right-0 w-64 bg-gray-800 text-white h-full md:hidden z-40"
+        className="fixed top-0 right-0 w-64 bg-gray-800 h-screen text-white md:hidden z-[50000]"
       >
         {/* Close button */}
         <button
