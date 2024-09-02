@@ -4,36 +4,36 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "MERN Blog App With Admin Panel",
+    title: "DevBytes Blog App",
     description:
-      "A full-featured blog application with an admin panel, including user authentication, CRUD operations, and responsive design.",
+      "Full stack MERN blog app with admin panel for content management.",
     imgSrc: "/assets/blog-project.png",
     githubLink: "https://github.com/hamaadafzal4209/Blog-App-With-Admin-Panel",
     liveLink: "https://blog-app-with-admin-panel.onrender.com/",
     techStack: ["React", "MongoDB", "Express", "Tailwind CSS"],
   },
   {
-    title: "Full Stack Food Ordering App",
+    title: "Savory Bites",
     description:
-      "A complete food ordering app featuring a modern UI/UX, secure payment gateway, and robust backend capabilities.",
+      "Food ordering application featuring a user-friendly interface and secure payments.",
     imgSrc: "/assets/food-app.jpg",
     githubLink: "https://github.com/hamaadafzal4209/Food-Ordering-App",
     liveLink: "https://savory-bites.onrender.com/",
     techStack: ["React", "MongoDB", "Node Js", "Stripe"],
   },
   {
-    title: "Real Estate App",
+    title: "Real Estate Platform",
     description:
-      "A real estate website with property listing, filtering, user authentication, and a responsive, user-friendly interface.",
+      "Real estate site with property listings, user authentication, and advanced filters.",
     imgSrc: "/assets/estate-app.png",
     githubLink: "https://github.com/hamaadafzal4209/mern-real-estate-website",
     liveLink: "https://mern-estate-vqt3.onrender.com/",
     techStack: ["React", "Node Js", "MongoDB", "Tailwind CSS"],
   },
   {
-    title: "React Portfolio",
+    title: "Modern Portfolio",
     description:
-      "A modern and responsive portfolio website showcasing projects with a clean, minimal design.",
+      "Responsive portfolio showcasing projects with a clean and minimal design.",
     imgSrc: "/assets/portfolio.png",
     githubLink: "https://github.com/hamaadafzal4209/React-Smith-Portfolio-",
     liveLink: "https://main--smithdesigns.netlify.app/",
@@ -58,10 +58,8 @@ function Portfolio() {
         </Fade>
         <Fade>
           <p className="text-gray-400 text-sm max-w-xl leading-[22px]">
-            Explore a selection of my recent projects, showcasing a blend of
-            creativity and technical expertise. Each project highlights my
-            proficiency in developing high-quality, responsive applications
-            tailored to meet specific user needs and solve real-world problems.
+            Explore a selection of my recent projects, each demonstrating my ability to create
+            high-quality, responsive applications tailored to solve real-world problems.
           </p>
         </Fade>
       </div>
@@ -96,16 +94,16 @@ function ProjectCard({ project }) {
           className="rounded-lg aspect-video"
         />
         <div className="absolute top-6 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-          <a href={project.githubLink} target="_blank">
+          <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
             <FaGithub className="text-white text-lg" />
           </a>
         </div>
         <div className="absolute top-16 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-          <a href={project.liveLink} target="_blank">
+          <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
             <FaExternalLinkAlt className="text-white text-lg" />
           </a>
         </div>
-        <div className="mt-4 text-left">
+        <div className="mt-4 text-left w-full">
           <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
           <p className="text-gray-300 text-sm mb-2">{project.description}</p>
           <div className="flex flex-wrap gap-2 mt-2">
