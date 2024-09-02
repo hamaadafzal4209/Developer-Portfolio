@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const variants = {
+const navbarVariants = {
+  hidden: { y: "-100%", opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+};
+
+const menuVariants = {
   open: { opacity: 1, x: 0 },
   closed: { opacity: 0, x: "100%" },
 };
@@ -22,38 +27,38 @@ function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
 
+    // Initial check to set the sticky state correctly
+    handleScroll();
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div
+    <motion.div
       className={`bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-white transition-shadow duration-300 ${
-        isSticky ? "fixed top-0 left-0 right-0 shadow-lg z-50" : ""
+        isSticky ? "fixed top-0 left-0 right-0 shadow-lg z-50" : "relative"
       }`}
+      variants={navbarVariants}
+      initial="visible" // Ensure navbar is visible by default
+      animate={isSticky ? "visible" : "visible"} // Always animate to visible
     >
-      <div className="flex items-center justify-between py-4 px-[5%] ">
+      <div className="flex items-center justify-between py-4 px-[5%]">
         {/* Logo */}
         <div className="text-[22px] md:text-2xl font-bold">Portfolio</div>
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center">
           <ul className="flex items-center gap-6">
-            <li
-              className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-            >
+            <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
               <a href="#about">About</a>
             </li>
-            <li
-              className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-            >
-               <a href="#portfolio">Projects</a>
+            <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+              <a href="#portfolio">Projects</a>
             </li>
-            <li
-              className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-            >
-               <a href="#contact">Contact</a>
+            <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -69,7 +74,7 @@ function Navbar() {
       {/* Mobile Menu */}
       <motion.div
         animate={isOpen ? "open" : "closed"}
-        variants={variants}
+        variants={menuVariants}
         transition={{ duration: 0.3 }}
         className="fixed top-0 right-0 w-64 bg-gray-800 text-white h-full md:hidden z-40"
       >
@@ -81,24 +86,18 @@ function Navbar() {
           <FaTimes />
         </button>
         <ul className="flex flex-col items-start pt-20 space-y-4 pl-4">
-          <li
-            className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-          >
-             <a href="#about">About</a>
+          <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+            <a href="#about">About</a>
           </li>
-          <li
-            className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-          >
-             <a href="#portfolio">Projects</a>
+          <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+            <a href="#portfolio">Projects</a>
           </li>
-          <li
-            className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer"
-          >
-             <a href="#contact">Contact</a>
+          <li className="px-4 py-2 rounded-full hover:bg-gray-700 transition-all duration-300 cursor-pointer">
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 
