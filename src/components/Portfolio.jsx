@@ -7,7 +7,7 @@ const projects = [
     title: "MERN Blog App With Admin Panel",
     description:
       "A full-featured blog application with an admin panel. This project demonstrates a comprehensive use of the MERN stack, featuring user authentication, CRUD operations, and a responsive design. Tailwind CSS was used to create a visually appealing and responsive interface.",
-    imgSrc: "../../public/assets/blog-project.png",
+    imgSrc: "/assets/blog-project.png",
     githubLink: "https://github.com/hamaadafzal4209/Blog-App-With-Admin-Panel",
     liveLink: "https://blog-app-with-admin-panel.onrender.com/",
     techStack: ["React", "MongoDB", "Express", "Tailwind CSS"],
@@ -16,7 +16,7 @@ const projects = [
     title: "Full Stack Food Ordering App",
     description:
       "A complete food ordering application featuring a modern UI/UX design. The project includes a secure payment gateway integrated with Stripe and utilizes MongoDB for data storage. This app showcases a seamless user experience and robust backend capabilities.",
-    imgSrc: "../../public/assets/food-app.jpg",
+    imgSrc: "/assets/food-app.jpg",
     githubLink: "https://github.com/hamaadafzal4209/Food-Ordering-App",
     liveLink: "https://savory-bites.onrender.com/",
     techStack: ["React", "MongoDB", "Node Js", "Stripe"],
@@ -25,7 +25,7 @@ const projects = [
     title: "Real Estate App",
     description:
       "A real estate website built with the MERN stack. It allows users to browse and list properties, featuring user authentication, property filtering, and an intuitive design. Tailwind CSS was used to create a clean, responsive, and user-friendly interface.",
-    imgSrc: "../../public/assets/estate-app.png",
+    imgSrc: "/assets/estate-app.png",
     githubLink: "https://github.com/hamaadafzal4209/mern-real-estate-website",
     liveLink: "https://mern-estate-vqt3.onrender.com/",
     techStack: ["React", "Node Js", "MongoDB", "Tailwind CSS"],
@@ -34,7 +34,7 @@ const projects = [
     title: "React Portfolio",
     description:
       "A modern and responsive portfolio website built with React and Tailwind CSS. This project showcases various projects and skills, with a clean and minimal design, focusing on performance and aesthetics.",
-    imgSrc: "../../public/assets/portfolio.png",
+    imgSrc: "/assets/portfolio.png",
     githubLink: "https://github.com/hamaadafzal4209/React-Smith-Portfolio-",
     liveLink: "https://main--smithdesigns.netlify.app/",
     techStack: ["React", "Tailwind CSS"],
