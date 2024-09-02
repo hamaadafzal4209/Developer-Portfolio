@@ -6,7 +6,7 @@ const projects = [
   {
     title: "MERN Blog App With Admin Panel",
     description:
-      "A full-featured blog application with an admin panel. This project demonstrates a comprehensive use of the MERN stack, featuring user authentication, CRUD operations, and a responsive design. Tailwind CSS was used to create a visually appealing and responsive interface.",
+      "A full-featured blog application with an admin panel, including user authentication, CRUD operations, and responsive design.",
     imgSrc: "/assets/blog-project.png",
     githubLink: "https://github.com/hamaadafzal4209/Blog-App-With-Admin-Panel",
     liveLink: "https://blog-app-with-admin-panel.onrender.com/",
@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Full Stack Food Ordering App",
     description:
-      "A complete food ordering application featuring a modern UI/UX design. The project includes a secure payment gateway integrated with Stripe and utilizes MongoDB for data storage. This app showcases a seamless user experience and robust backend capabilities.",
+      "A complete food ordering app featuring a modern UI/UX, secure payment gateway, and robust backend capabilities.",
     imgSrc: "/assets/food-app.jpg",
     githubLink: "https://github.com/hamaadafzal4209/Food-Ordering-App",
     liveLink: "https://savory-bites.onrender.com/",
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Real Estate App",
     description:
-      "A real estate website built with the MERN stack. It allows users to browse and list properties, featuring user authentication, property filtering, and an intuitive design. Tailwind CSS was used to create a clean, responsive, and user-friendly interface.",
+      "A real estate website with property listing, filtering, user authentication, and a responsive, user-friendly interface.",
     imgSrc: "/assets/estate-app.png",
     githubLink: "https://github.com/hamaadafzal4209/mern-real-estate-website",
     liveLink: "https://mern-estate-vqt3.onrender.com/",
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "React Portfolio",
     description:
-      "A modern and responsive portfolio website built with React and Tailwind CSS. This project showcases various projects and skills, with a clean and minimal design, focusing on performance and aesthetics.",
+      "A modern and responsive portfolio website showcasing projects with a clean, minimal design.",
     imgSrc: "/assets/portfolio.png",
     githubLink: "https://github.com/hamaadafzal4209/React-Smith-Portfolio-",
     liveLink: "https://main--smithdesigns.netlify.app/",
@@ -77,13 +77,6 @@ function Portfolio() {
 }
 
 function ProjectCard({ project }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const charLimit = 90;
-
-  const toggleExpansion = () => {
-    setIsExpanded(!isExpanded);
-  };
-
   return (
     <Fade>
       <div
@@ -114,20 +107,7 @@ function ProjectCard({ project }) {
         </div>
         <div className="mt-4 text-left">
           <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-          <p className="text-gray-300 text-sm mb-2">
-            {isExpanded
-              ? project.description
-              : project.description.slice(0, charLimit) +
-                (project.description.length > charLimit ? "..." : "")}
-          </p>
-          {project.description.length > charLimit && (
-            <button
-              onClick={toggleExpansion}
-              className="text-blue-400 text-xs underline"
-            >
-              {isExpanded ? "Read Less" : "Read More"}
-            </button>
-          )}
+          <p className="text-gray-300 text-sm mb-2">{project.description}</p>
           <div className="flex flex-wrap gap-2 mt-2">
             {project.techStack.map((tech, i) => (
               <span
