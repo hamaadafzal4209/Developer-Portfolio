@@ -73,7 +73,7 @@ function Hero() {
           <Fade>
             <div className="flex flex-col xs:flex-row justify-center gap-6 mb-10">
               <a
-                href="/path-to-your-cv.pdf"
+                href="../../public/Hafiz Hamaad Afzal CV.pdf"
                 download
                 className="px-6 py-3 bg-indigo-800 text-white font-semibold rounded-full transition-transform duration-300 hover:bg-indigo-700 hover:scale-105"
               >
