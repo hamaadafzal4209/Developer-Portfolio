@@ -41,6 +41,7 @@ function Navbar() {
         isSticky ? "fixed top-0 left-0 right-0 shadow-md z-50" : "relative"
       }`}
       variants={navbarVariants}
+      syu
     >
       <div className="flex items-center justify-between py-4 px-[5%]">
         {/* Logo */}

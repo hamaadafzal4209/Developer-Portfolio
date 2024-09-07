@@ -1,7 +1,8 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 import { Fade } from "react-awesome-reveal";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
+// Project Data
 const projects = [
   {
     title: "DevBytes Blog App",
@@ -10,7 +11,7 @@ const projects = [
     imgSrc: "/assets/blog-project.png",
     githubLink: "https://github.com/hamaadafzal4209/Blog-App-With-Admin-Panel",
     liveLink: "https://blog-app-with-admin-panel.onrender.com/",
-    techStack: ["React", "MongoDB", "Express", "Tailwind CSS"],
+    techStack: ["React", "MongoDB", "Firebase", "Node Js", "Tailwind CSS"],
   },
   {
     title: "Savory Bites",
@@ -19,7 +20,7 @@ const projects = [
     imgSrc: "/assets/food-app.jpg",
     githubLink: "https://github.com/hamaadafzal4209/Food-Ordering-App",
     liveLink: "https://savory-bites.onrender.com/",
-    techStack: ["React", "MongoDB", "Node Js", "Stripe"],
+    techStack: ["React", "MongoDB", "Node Js", "Stripe", "Tailwind CSS"],
   },
   {
     title: "Real Estate Platform",
@@ -28,7 +29,7 @@ const projects = [
     imgSrc: "/assets/estate-app.png",
     githubLink: "https://github.com/hamaadafzal4209/mern-real-estate-website",
     liveLink: "https://mern-estate-vqt3.onrender.com/",
-    techStack: ["React", "Node Js", "MongoDB", "Tailwind CSS"],
+    techStack: ["React", "Node Js", "MongoDB", "Firebase", "Tailwind CSS"],
   },
   {
     title: "Modern Portfolio",
@@ -37,7 +38,7 @@ const projects = [
     imgSrc: "/assets/portfolio.png",
     githubLink: "https://github.com/hamaadafzal4209/React-Smith-Portfolio-",
     liveLink: "https://main--smithdesigns.netlify.app/",
-    techStack: ["React", "Tailwind CSS"],
+    techStack: ["React", "Redux", "HTML", "CSS", "Git"],
   },
 ];
 
@@ -58,14 +59,15 @@ function Portfolio() {
         </Fade>
         <Fade>
           <p className="text-gray-400 text-sm max-w-xl leading-[22px]">
-            Explore a selection of my recent projects, each demonstrating my ability to create
-            high-quality, responsive applications tailored to solve real-world problems.
+            Explore a selection of my recent projects, each demonstrating my
+            ability to create high-quality, responsive applications tailored to
+            solve real-world problems.
           </p>
         </Fade>
       </div>
 
       {/* Projects */}
-      <div className="projects-card-container gap-6">
+      <div className="projects-card-container gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
@@ -74,7 +76,22 @@ function Portfolio() {
   );
 }
 
+// ProjectCard Component
 function ProjectCard({ project }) {
+  const techImages = {
+    React: "/assets/react.png",
+    MongoDB: "/assets/mongodb.png",
+    Express: "/assets/expressjs.png",
+    "Tailwind CSS": "/assets/tailwind-css.png",
+    Stripe: "../../public/assets/stripe.png",
+    "Node Js": "../../public/assets/node.png",
+    Firebase: "/assets/firebase.png",
+    Redux: "/assets/redux.png",
+    HTML: "/assets/html.png",
+    CSS: "/assets/css.png",
+    Git: "/assets/git.png",
+  };
+
   return (
     <Fade>
       <div
@@ -88,13 +105,19 @@ function ProjectCard({ project }) {
         }}
         className="relative flex flex-col items-center p-4"
       >
+        {/* Project Thumbnail */}
         <img
           src={project.imgSrc}
           alt={`${project.title} Screenshot`}
           className="rounded-lg aspect-video"
         />
+        {/* GitHub & Live Links */}
         <div className="absolute top-6 right-6 bg-black w-9 flex items-center justify-center h-9 p-2 rounded-full shadow-lg cursor-pointer">
-          <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub className="text-white text-lg" />
           </a>
         </div>
@@ -103,17 +126,25 @@ function ProjectCard({ project }) {
             <FaExternalLinkAlt className="text-white text-lg" />
           </a>
         </div>
+
+        {/* Project Title & Description */}
         <div className="mt-4 text-left w-full">
           <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
           <p className="text-gray-300 text-sm mb-2">{project.description}</p>
-          <div className="flex flex-wrap gap-2 mt-2">
+
+          {/* Tech Stack Images */}
+          <div className="flex flex-wrap gap-2 mt-3">
             {project.techStack.map((tech, i) => (
-              <span
+              <div
                 key={i}
-                className="bg-black text-white text-xs py-1 px-2 rounded-full"
+                className="bg-gray-900 w-9 h-9 p-2 rounded-full border-[0.6px] border-white/35 flex items-center justify-center"
               >
-                {tech}
-              </span>
+                <img
+                  src={techImages[tech]}
+                  alt={`${tech} logo`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             ))}
           </div>
         </div>
