@@ -63,7 +63,7 @@ function Hero() {
                 variants={textVariants}
                 initial="hidden"
                 animate="visible"
-                className="text-sm md:text-lg mb-10 text-gray-400 max-w-2xl"
+                className="text-sm md:text-lg mb-8 text-gray-400 max-w-2xl"
               >
                 I build efficient, scalable, and visually appealing web
                 applications with a focus on clean design and smooth user
