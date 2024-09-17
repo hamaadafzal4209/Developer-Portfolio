@@ -4,9 +4,9 @@ const Loader = () => {
   return (
     <div style={styles.loaderContainer}>
       <Circles
-        height="80"
-        width="80"
-        color="#FD366E"
+        height="100"
+        width="100"
+        color="#3730a3"
         ariaLabel="circles-loading"
         visible={true}
       />
@@ -20,7 +20,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#111827',
   },
 };
 

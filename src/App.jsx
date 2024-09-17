@@ -14,11 +14,15 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); 
+    window.addEventListener('load', () => {
+      setLoading(false); 
+    });
 
-    return () => clearTimeout(timer);
+    return () => {
+      window.removeEventListener('load', () => {
+        setLoading(false);
+      });
+    };
   }, []);
 
   if (loading) {
