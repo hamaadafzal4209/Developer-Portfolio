@@ -120,7 +120,11 @@ function Hero() {
               rel="noopener noreferrer"
               className="text-3xl transition-transform duration-300 hover:text-indigo-300 hover:scale-125"
             >
-              <img src="/assets/leetcode.png" className="w-[30px] filter invert" alt="" />
+              <img
+                src="/assets/leetcode.png"
+                className="w-[30px] filter invert"
+                alt=""
+              />
             </a>
           </div>
         </div>
