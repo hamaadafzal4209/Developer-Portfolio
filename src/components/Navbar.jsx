@@ -9,7 +9,7 @@ const navbarVariants = {
 
 const menuVariants = {
   open: { opacity: 1, x: 0 },
-  closed: { opacity: 1, x: "100%" },
+  closed: { opacity: 0, x: "100%" }, // Ensure it's off-screen initially
 };
 
 function Navbar() {
@@ -41,7 +41,8 @@ function Navbar() {
         isSticky ? "fixed top-0 left-0 right-0 shadow-md z-50" : "relative"
       }`}
       variants={navbarVariants}
-      syu
+      initial="hidden"
+      animate="visible"
     >
       <div className="flex items-center justify-between py-4 px-[5%]">
         {/* Logo */}
@@ -72,6 +73,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       <motion.div
+        initial="closed" // Initial state is closed
         animate={isOpen ? "open" : "closed"}
         variants={menuVariants}
         transition={{ duration: 0.3 }}
