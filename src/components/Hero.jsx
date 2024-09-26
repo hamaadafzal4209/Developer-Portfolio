@@ -6,7 +6,29 @@ import { Fade } from "react-awesome-reveal";
 // Define animation variants
 const textVariants = {
   hidden: { opacity: 0, y: 20 }, // Start hidden and translated down
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } }, // Slide up and fade in
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: "easeOut" }, // Smooth slide up and fade in
+  },
+};
+
+const buttonVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut", delay: 0.3 }, // Scale and fade with a slight delay
+  },
+};
+
+const socialIconVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut", delay: 0.5 }, // Fade in and move up
+  },
 };
 
 function Hero() {
@@ -26,6 +48,7 @@ function Hero() {
                 {"Hi I'm"} <span className="text-indigo-800">Hamaad Afzal</span>
               </motion.h1>
             </Fade>
+
             {/* TypeAnimation for medium screens and above */}
             <Fade>
               <div className="hidden sm:block">
@@ -34,17 +57,18 @@ function Hero() {
                     "Frontend Web Developer",
                     2000,
                     "Mobile App Developer",
-                    2000, // Waits 2s
+                    2000,
                     "Backend Web Developer",
-                    2000, // Waits 2s
+                    2000,
                   ]}
-                  speed={50} // Speed of typing
+                  speed={50}
                   wrapper="p"
                   repeat={Infinity}
                   className="text-lg sm:text-3xl font-medium mb-8"
                 />
               </div>
             </Fade>
+
             {/* Simple text for small screens */}
             <Fade>
               <div className="block sm:hidden">
@@ -58,6 +82,8 @@ function Hero() {
                 </motion.p>
               </div>
             </Fade>
+
+            {/* Description Text */}
             <Fade>
               <motion.p
                 variants={textVariants}
@@ -70,9 +96,15 @@ function Hero() {
                 experiences.
               </motion.p>
             </Fade>
+
             {/* Buttons */}
             <Fade>
-              <div className="flex flex-col sm:flex-row gap-6 mb-10">
+              <motion.div
+                variants={buttonVariants}
+                initial="hidden"
+                animate="visible"
+                className="flex flex-col sm:flex-row gap-6 mb-10"
+              >
                 <a
                   href="/Hafiz Hamaad Afzal CV.pdf"
                   download
@@ -86,11 +118,16 @@ function Hero() {
                 >
                   Contact Me
                 </a>
-              </div>
+              </motion.div>
             </Fade>
 
             {/* Social Icons */}
-            <div className="flex justify-center sm:justify-start gap-6">
+            <motion.div
+              variants={socialIconVariants}
+              initial="hidden"
+              animate="visible"
+              className="flex justify-center sm:justify-start gap-6"
+            >
               <a
                 href="https://github.com/hamaadafzal4209/"
                 target="_blank"
@@ -124,18 +161,22 @@ function Hero() {
                 <img
                   src="/assets/leetcode.png"
                   className="w-[30px] filter invert"
-                  alt=""
+                  alt="Leetcode"
                 />
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
+
       <div className="w-full lg:w-1/2 flex items-center justify-center">
-        <img
+        <motion.img
           src="/assets/hero-img.svg"
           className=" max-w-md lg:max-w-lg w-full px-4"
-          alt=""
+          alt="Hero Image"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         />
       </div>
     </div>
