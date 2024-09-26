@@ -11,7 +11,7 @@ import BackToTop from './components/BackToTop';
 import Loader from './components/Loader';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     window.addEventListener('load', () => {
