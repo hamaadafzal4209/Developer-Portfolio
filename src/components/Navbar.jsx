@@ -9,7 +9,7 @@ const navbarVariants = {
 
 const menuVariants = {
   open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "100%" }, // Ensure it's off-screen initially
+  closed: { opacity: 0, x: "100%" },
 };
 
 function Navbar() {
